@@ -1,5 +1,4 @@
 package clasesAbstractas3;
-
 public class Electronico extends Producto {
 	int garantia; //en meses
 	String marca;
@@ -8,7 +7,6 @@ public class Electronico extends Producto {
 	public Electronico() {
 		super();
 	}
-
 	public Electronico(String nombre, int codigo, double precio, int garantia, String marca, String caracteristicas) {
 		super(nombre, codigo, precio);
 		this.garantia = garantia;
@@ -40,22 +38,13 @@ public class Electronico extends Producto {
 		//retorna solo el impuesto aplicado
 		return getPrecio()*(Aux/100);
 	}
-
 	public double AplicarDescuentos(double Aux) {
 		//retorna el precio final con el descuento aplicado
 		return getPrecio()-(getPrecio()*(Aux/100));
 	}
 
-	@Override
 	public String toString() {
 		return "Producto: "+nombre+" [codigo: "+codigo+ (garantia != 0 ? " garantia: " + garantia + " meses, " : "sin garantia") + (marca != null ? "marca: " + marca + ", " : "")
 				+ (caracteristicas != null ? "caracteristicas: " + caracteristicas : "") + "]";
-	}
- 
-	
-	
-	
-	
-	
-	
+	}	
 }
