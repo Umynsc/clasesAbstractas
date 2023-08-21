@@ -14,7 +14,7 @@ public class arquero extends personajeBase{
 	}
 
 	public int ataque() {//el arquero usa destreza para el ataque
-		aux = random.nextInt(20)+(destreza*2);
+		aux = random.nextInt(20)+(destreza*2)+4;
 		return aux;
 	}
 	public int movimiento() {//tiene bonificacion en movimiento

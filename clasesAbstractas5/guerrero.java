@@ -21,15 +21,18 @@ public class guerrero extends personajeBase{
 	}
 	public int descanso() {
 		aux = random.nextInt(constitucion);
+		this.setVida(this.vida + aux);
 		return aux;
 	}
 	
 	public int dañoFisico(int daño) {
 		aux = (daño-(constitucion+destreza+5)); 
+		this.setVida(this.vida-aux);
 		return aux;
 	}
 	public int dañoMagico(int daño) {
 		aux = (daño-(sabiduria+destreza)); 
+		this.setVida(this.vida - aux);
 		return aux;
 	}
 	

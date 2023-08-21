@@ -23,9 +23,7 @@ public abstract class personajeBase {
 		this.carisma = carisma;
 	}
 
-	public int getFuerza() {
-		return fuerza;
-	}
+
 	public int getVida() {
 		return vida;
 	}
@@ -37,6 +35,10 @@ public abstract class personajeBase {
 	}
 	public void setMagia(int magia) {
 		this.magia = magia;
+	}
+	
+	public int getFuerza() {
+		return fuerza;
 	}
 	public int getDestreza() {
 		return destreza;

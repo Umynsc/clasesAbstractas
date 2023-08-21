@@ -31,9 +31,11 @@ public class mago extends personajeBase{
 		return aux;
 	}
 	public int dañoMagico(int daño) {
-		aux = (daño-(sabiduria+destreza+5)); 
-		return aux;
+		return daño-(sabiduria+destreza+5); 
 	}
 	
+	public int bolaDeFuego() {
+		return random.nextInt(carisma*2)+inteligencia+5;
+	}
 
 }
