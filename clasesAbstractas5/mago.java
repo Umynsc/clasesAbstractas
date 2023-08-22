@@ -14,28 +14,32 @@ public class mago extends personajeBase{
 	}
 
 	public int ataque() {
-		aux = random.nextInt(20)+(fuerza*2);
-		return aux;
+		return random.nextInt(20)+(fuerza*2);
 	}
 	public int movimiento() {
-		aux = random.nextInt(destreza/2)+2;
+		aux = random.nextInt(destreza/2)+3;
 		return aux;
 	}
 	public int descanso() {
-		aux = random.nextInt(constitucion);
+		aux = random.nextInt(constitucion)+2;
+		this.setVida(this.vida + aux);
 		return aux;
 	}
 	
 	public int dañoFisico(int daño) {
 		aux = (daño-(constitucion+destreza)); 
+		this.setVida(this.vida-aux);
 		return aux;
 	}
 	public int dañoMagico(int daño) {
-		return daño-(sabiduria+destreza+5); 
+		aux = (daño-(sabiduria+destreza+5)); 
+		this.setVida(this.vida - aux);
+		return aux;
 	}
 	
-	public int bolaDeFuego() {
-		return random.nextInt(carisma*2)+inteligencia+5;
+	public int Lanzar() {
+		BoladeFuego hechizo = new BoladeFuego(this.inteligencia,this.carisma);
+		return hechizo.Lanzar();
 	}
 
 }
